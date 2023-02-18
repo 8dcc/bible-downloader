@@ -11,8 +11,8 @@ except Exception:
 DEBUG       = False      # Print extra information.
 RECURSE     = True       # Will go to the next chapter until finished
 LINE_LIMIT  = 85         # Will jump to the next line if too long. 0 means disabled.
-LINE_INDENT = 5          # Start of text lines.
-NUM_PAD     = 4          # Padding for the numbers.
+LINE_INDENT = 6          # Start of text lines.
+NUM_PAD     = 5          # Padding for the numbers.
 VERSION     = "dhh"      # Bible version.
 FIRST_BOOK  = "genesis"  # Only used for replacing START_URL
 FIRST_CHAP  = "1"        #
@@ -133,7 +133,7 @@ def main():
                         print(final_str)
                     else:
                         # Line limit, jump to the next line if the line is too long
-                        print_limited(final_str, LINE_LIMIT, 5)
+                        print_limited(final_str, LINE_LIMIT, LINE_INDENT)
 
                     last_printed = "texto"
             elif (DEBUG):
