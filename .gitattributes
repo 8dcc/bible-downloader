@@ -1,0 +1,2 @@
+# Ignore the html version for lang stats
+/web/*.html linguist-detectable=false
