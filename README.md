@@ -1,6 +1,8 @@
 # Bible downloader
 **Downloads the bible in text format from [biblia.es](https://www.biblia.es/dios-habla-hoy.php)**
 
+Full converted web version: [Click me](https://8dcc.github.io/bible-downloader/web/)
+
 ### Using
 ```console
 $ git clone https://github.com/8dcc/bible-downloader
@@ -19,7 +21,8 @@ $ python3 print-chapters.py | tee file.txt    # Also print
 ```
 
 ### Format
-The format is pretty simple and it can be easily changed by editing the [constants](https://github.com/8dcc/bible-downloader/blob/b82a8cb8c45a9852618a153e0a3fcfd72af96817/print-chapters.py#L10-L19) in the code. Default format (although it would be easy to convert it to something like markdown):
+The format is pretty simple and it can be easily changed by editing the [constants](https://github.com/8dcc/bible-downloader/blob/b82a8cb8c45a9852618a153e0a3fcfd72af96817/print-chapters.py#L10-L19)
+in the code. Default format (although there is a markdown version):
 ```
 
 ========================================
