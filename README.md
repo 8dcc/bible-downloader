@@ -1,7 +1,7 @@
 # Bible downloader
 **Downloads the bible in text format from [biblia.es](https://www.biblia.es/dios-habla-hoy.php)**
 
-Full converted web version: [Click me](https://8dcc.github.io/bible-downloader/web/)
+Full converted web version: [Click me](https://8dcc.github.io/bible-downloader/output/web/)
 
 ### Using
 ```console
