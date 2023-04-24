@@ -23,7 +23,7 @@ def main():
     print("#+title: Bible")
     print("#+startup: overview")
     print("#+options: toc:2")
-    print("#+author: 8dcc\n")
+    print("#+author: 8dcc")
 
     # Add the following line if you want subscripts. Replace cursives with:
     # "^{" and "}"
@@ -77,6 +77,11 @@ def main():
             elif (item.get("class")[0] == "versiculo"):
                 # Split to convert "14-15" -> "14"
                 final_vers = item.string.split("-")[0]
+
+                # Add leading zero to <10
+                if (int(final_vers) < 10):
+                    final_vers = "0" + final_vers
+
                 sys.stdout.write(final_vers)
                 sys.stdout.write(". ")
 
@@ -93,6 +98,11 @@ def main():
                     if (last_printed == "texto"):
                         # Indentation for multi-line list items
                         digits_vers = int(math.log10(vers_num)) + 1
+
+                        # Add leading zero to <10
+                        if (digits_vers < 2):
+                            digits_vers = 2
+
                         for i in range(digits_vers + 2):   # + space and dot
                             sys.stdout.write(' ')
 
