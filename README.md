@@ -1,5 +1,5 @@
 # Bible downloader
-**Downloads the bible in text format from [biblia.es](https://www.biblia.es/dios-habla-hoy.php)**
+**Various scripts for downloading the Bible in different formats.**
 
 Full converted web version: [Click me](https://8dcc.github.io/bible-downloader/output/web/)
 
