@@ -16,8 +16,9 @@ FIRST_BOOK   = "genesis"  # Only used for replacing START_URL
 FIRST_CHAP   = "1"        #
 ##########################
 
-BASE_URL  = "https://www.biblia.es/"
-START_URL = BASE_URL + f"biblia-buscar-libros-1.php?libro={FIRST_BOOK}&capitulo={FIRST_CHAP}&version={VERSION}"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36"
+BASE_URL   = "https://www.biblia.es/"
+START_URL  = BASE_URL + f"biblia-buscar-libros-1.php?libro={FIRST_BOOK}&capitulo={FIRST_CHAP}&version={VERSION}"
 
 # For similar C version with comments, see 8dcc/text-formatter
 # String is the string to print, limit is the max position in a line
@@ -25,8 +26,8 @@ def print_limited(string, limit):
     if (string == None):
         return
 
-    # For printing the last word. Space and not newline because we also want to check
-    # if the last word is on the line limit.
+    # For printing the last word. Space and not newline because we also want to
+    # check if the last word is on the line limit.
     string += ' '
 
     line_p     = 0
@@ -70,11 +71,8 @@ def main():
     url = START_URL
     while (url != ""):
         r = requests.get(url,
-                         allow_redirects=True,
-                         headers = {
-                             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
-                             }
-                         )
+                         allow_redirects = True,
+                         headers = { 'User-Agent': USER_AGENT })
 
         global_soup = bs4.BeautifulSoup(r.text, 'html.parser')
         contents = global_soup.find_all("div", {"class": "col_i_1_int_1"})
